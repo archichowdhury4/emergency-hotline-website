@@ -13,7 +13,7 @@
 <body class="h-[100] max-w-lg mx-auto" >
    <div class="navbar bg-white h-15 px-4 py-2 justify-between mb-4">
    <div class="flex w-10 h-10  space-x-2"> <img src="assets/logo.png" alt="">
-    <h1 class="text-lg text-[#006747] font-extrabold text-sm w-4 h-4 ">Emergency <br> <span>Service</span></h1>
+    <h1 class=" text-[#006747] font-extrabold text-sm w-4 h-4 ">Emergency <br> <span>Service</span></h1>
     </div>
     <div class="flex items-center space-x-3.5">
         <h1 id="heart-count">0</h1>
@@ -39,12 +39,12 @@
             <button id="heart-btn1"><i class="fa-regular fa-heart"></i></button>
             </div>
           <h3 class="text-lg font-bold mb-1">National Emergency Number</h3> 
-           <p class="text-sm text-gray-600 mb-2">National Emergency</p>
-           <p class="font-bold">999</p>
+           <p id="p1" class="text-sm text-gray-600 mb-2">National Emergency</p>
+           <p id="num1" class="font-bold number-call">999</p>
            <div class="bg-gray-200 h-5 w-6 rounded-lg mb-3"><p class="text-xs text-gray-500 ml-1 mb-3">All</p></div>
            <div class="flex gap-6">
             <button id="copy-btn1" class="btn w-22 rounded-lg text-gray-500"><i class="fa-regular fa-copy"></i>Copy</button>
-           <button id="call-btn1" class="btn w-22  text-white bg-[#00A63E] rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+           <button id="call-btn1" class=" call btn w-22  text-white bg-[#00A63E] rounded-lg" data-index="1"><i class="fa-solid fa-phone"></i>Call</button>
            </div>
         </div>
         <!-- police section -->
@@ -56,12 +56,12 @@
             <button id="heart-btn2"><i class="fa-regular fa-heart"></i></button>
             </div>
           <h3 class="text-lg font-bold mb-1">Police HelpLine Number</h3> 
-           <p class="text-sm text-gray-600 mb-2">Police</p>
-           <p class="font-bold">999</p>
+           <p id="p2" class="text-sm text-gray-600 mb-2">Police</p>
+           <p id="num2" class="font-bold">999</p>
            <div class="bg-gray-200 h-5 w-10 rounded-lg mb-3"><p class="text-xs text-gray-500 ml-1 mb-3">Police</p></div>
            <div class="flex gap-6">
             <button id="copy-btn2"  class="btn w-22 rounded-lg text-gray-500"><i class="fa-regular fa-copy"></i>Copy</button>
-           <button id="call-btn2" class="btn w-22  text-white bg-[#00A63E] rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+           <button id="call-btn2" class=" call btn w-22  text-white bg-[#00A63E] rounded-lg" data-index="2"><i class="fa-solid fa-phone"></i>Call</button>
            </div>
         </div>
         <!-- fire section -->
@@ -73,12 +73,12 @@
             <button id="heart-btn3"><i class="fa-regular fa-heart"></i></button>
             </div>
           <h3 class="text-lg font-bold mb-1">Fire Service Number</h3> 
-           <p class="text-sm text-gray-600 mb-2">Fire Service</p>
-           <p class="font-bold">999</p>
+           <p id="p3" class="text-sm text-gray-600 mb-2">Fire Service</p>
+           <p id="num3" class="font-bold">999</p>
            <div class="bg-gray-200 h-5 w-7 rounded-lg mb-3"><p class="text-xs text-gray-500 ml-1 mb-3">Fire</p></div>
            <div class="flex gap-6">
             <button id="copy-btn3" class="btn w-22 rounded-lg text-gray-500"><i class="fa-regular fa-copy"></i>Copy</button>
-           <button id="call-btn3" class="btn w-22  text-white bg-[#00A63E] rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+           <button id="call-btn3" class="call btn w-22  text-white bg-[#00A63E] rounded-lg" data-index="3"><i class="fa-solid fa-phone"></i>Call</button>
            </div>
         </div>
         <!-- Ambulance section -->
@@ -90,12 +90,12 @@
             <button id="heart-btn4"><i class="fa-regular fa-heart"></i></button>
             </div>
           <h3 class="text-lg font-bold mb-1">Ambulance Service</h3> 
-           <p class="text-sm text-gray-600 mb-2">Ambulance</p>
-           <p class="font-bold">1994-999999</p>
+           <p id="p4" class="text-sm text-gray-600 mb-2">Ambulance</p>
+           <p id="num4" class="font-bold">1994-999999</p>
            <div class="bg-gray-200 h-5 w-11 rounded-lg mb-3"><p class="text-xs text-gray-500 ml-1 mb-3">Health</p></div>
            <div class="flex gap-6">
             <button id="copy-btn4" class="btn w-22 rounded-lg text-gray-500"><i class="fa-regular fa-copy"></i>Copy</button>
-           <button id="call-btn4" class="btn w-22  text-white bg-[#00A63E] rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+           <button id="call-btn4" class=" call btn w-22  text-white bg-[#00A63E] rounded-lg" data-index="4"><i class="fa-solid fa-phone"></i>Call</button>
            </div>
         </div>
         <!-- Women & Child section -->
@@ -107,12 +107,12 @@
             <button id ="heart-btn5"><i class="fa-regular fa-heart"></i></button>
             </div>
           <h3 class="text-lg font-bold mb-1">Women & Child Helpline</h3> 
-           <p class="text-sm text-gray-600 mb-2">Women & Child Helpline</p>
-           <p class="font-bold">109</p>
+           <p id="p5" class="text-sm text-gray-600 mb-2">Women & Child Helpline</p>
+           <p id="num5" class="font-bold">109</p>
            <div class="bg-gray-200 h-5 w-8 rounded-lg mb-3"><p class="text-xs text-gray-500 ml-1 mb-3">Help</p></div>
            <div class="flex gap-6">
             <button id="copy-btn5" class="btn w-22 rounded-lg text-gray-500"><i class="fa-regular fa-copy"></i>Copy</button>
-           <button id="call-btn5" class="btn w-22  text-white bg-[#00A63E] rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+           <button id="call-btn5" class="call btn w-22  text-white bg-[#00A63E] rounded-lg" data-index="5"><i class="fa-solid fa-phone"></i>Call</button>
            </div>
         </div>
         <!-- Anti corruption section -->
@@ -124,12 +124,12 @@
             <button id="heart-btn6"><i class="fa-regular fa-heart"></i></button>
             </div>
           <h3 class="text-lg font-bold mb-1">Anti-Corruption HelpLine</h3> 
-           <p class="text-sm text-gray-600 mb-2">Anti-Corruption</p>
-           <p class="font-bold">106</p>
+           <p id="p6" class="text-sm text-gray-600 mb-2">Anti-Corruption</p>
+           <p id="num6" class="font-bold">106</p>
            <div class="bg-gray-200 h-5 w-8 rounded-lg mb-3"><p class="text-xs text-gray-500 ml-1 mb-3">Govt.</p></div>
            <div class="flex gap-6">
             <button id="copy-btn6" id="copy-btn" class="btn w-22 rounded-lg text-gray-500"><i class="fa-regular fa-copy"></i>Copy</button>
-           <button id="call-btn6" class="btn w-22  text-white bg-[#00A63E] rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+           <button id="call-btn6" class=" call btn w-22  text-white bg-[#00A63E] rounded-lg" data-index="6"><i class="fa-solid fa-phone"></i>Call</button>
            </div>
         </div>
         

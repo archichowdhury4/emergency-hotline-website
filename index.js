@@ -64,8 +64,17 @@ document.getElementById("copy-btn6").addEventListener("click", function(){
 })
 
 
+// alert
+const callButtons = document.getElementsByClassName('call')
+  for(const button of callButtons){
+    button.addEventListener('click', function(){
+      const index = this.dataset.index;
+      const p = document.getElementById('p' +index).innerText;
+      const num = document.getElementById('num' +index).innerText;
 
-
+      alert("📞" + p +" " + num)
+    })
+  }
 
 
 // function
@@ -81,28 +90,42 @@ function copyCounts(id){
 function cutCoin(id) {
     if (balance < 20) {
       alert("❌ You don’t have enough coins. To make a call, you need at least 20 coins.");
-      return; // Stop the function if not enough balance
+      return;
     }
 
     balance -= 20;
     document.getElementById("total-coin").innerText = balance;
   }
 
-// call history 
-document.getElementsByClassName("call-button").addEventListener("click", function(){
-const transactionContainer = document.getElementById("history-container")
 
+document.getElementById("call-btn1").addEventListener("click", function () {
+    callHistory("call-btn1")
+})
+function callHistory(id) {
+    const button = document.getElementById(id);
+    const lineNumber = button.getAttribute("data-line");
+
+    const newEntry = {
+      name: "Unknown Caller",
+      line: lineNumber,
+      date: new Date().toLocaleTimeString()
+    };
+
+    historyData.push(data);
+const transactionContainer = document.getElementById("history-container");
+    transactionContainer.innerHTML = "";
+    
 for(const data of historyData){
     const div = document.createElement("div")
     div.innerHTML = `
            <div class="flex justify-between items-center bg-[#FAFAFA]">
                 <div>
                     <h3>>${data.name}</h3>
-                    <p>999</p>
+                    <p>${data.line}</p>
                 </div>
                 <p>${data.date}</p>
             </div>
 `
     transactionContainer.appendChild(div)
 }
-})
+}
