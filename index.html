@@ -18,9 +18,9 @@
     <div class="flex items-center space-x-3.5">
         <h1 id="heart-count">0</h1>
         <img class="w-7 h-7" src="assets/heart.png" alt="">
-        <h1>100</h1>
+        <h1 id="total-coin">100</h1>
         <img class="w-7 h-7" src="assets/coin.png" alt="">
-        <button class="btn text-white bg-[#00A63E] rounded-2xl w-25 h-8">Copy</button>
+        <button class="btn text-white bg-[#00A63E] rounded-2xl w-25 h-8"><span id="copy-count">0</span> Copy</button>
     </div>
    </div> 
    <div class="bg-[#006747] h-50 ">
@@ -43,8 +43,8 @@
            <p class="font-bold">999</p>
            <div class="bg-gray-200 h-5 w-6 rounded-lg mb-3"><p class="text-xs text-gray-500 ml-1 mb-3">All</p></div>
            <div class="flex gap-6">
-            <button class="btn w-22 rounded-lg text-gray-500"><i class="fa-regular fa-copy"></i>Copy</button>
-           <button class="btn w-22  text-white bg-[#00A63E] rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+            <button id="copy-btn1" class="btn w-22 rounded-lg text-gray-500"><i class="fa-regular fa-copy"></i>Copy</button>
+           <button id="call-btn1" class="btn w-22  text-white bg-[#00A63E] rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
            </div>
         </div>
         <!-- police section -->
@@ -60,8 +60,8 @@
            <p class="font-bold">999</p>
            <div class="bg-gray-200 h-5 w-10 rounded-lg mb-3"><p class="text-xs text-gray-500 ml-1 mb-3">Police</p></div>
            <div class="flex gap-6">
-            <button class="btn w-22 rounded-lg text-gray-500"><i class="fa-regular fa-copy"></i>Copy</button>
-           <button class="btn w-22  text-white bg-[#00A63E] rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+            <button id="copy-btn2"  class="btn w-22 rounded-lg text-gray-500"><i class="fa-regular fa-copy"></i>Copy</button>
+           <button id="call-btn2" class="btn w-22  text-white bg-[#00A63E] rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
            </div>
         </div>
         <!-- fire section -->
@@ -77,8 +77,8 @@
            <p class="font-bold">999</p>
            <div class="bg-gray-200 h-5 w-7 rounded-lg mb-3"><p class="text-xs text-gray-500 ml-1 mb-3">Fire</p></div>
            <div class="flex gap-6">
-            <button class="btn w-22 rounded-lg text-gray-500"><i class="fa-regular fa-copy"></i>Copy</button>
-           <button class="btn w-22  text-white bg-[#00A63E] rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+            <button id="copy-btn3" class="btn w-22 rounded-lg text-gray-500"><i class="fa-regular fa-copy"></i>Copy</button>
+           <button id="call-btn3" class="btn w-22  text-white bg-[#00A63E] rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
            </div>
         </div>
         <!-- Ambulance section -->
@@ -94,8 +94,8 @@
            <p class="font-bold">1994-999999</p>
            <div class="bg-gray-200 h-5 w-11 rounded-lg mb-3"><p class="text-xs text-gray-500 ml-1 mb-3">Health</p></div>
            <div class="flex gap-6">
-            <button class="btn w-22 rounded-lg text-gray-500"><i class="fa-regular fa-copy"></i>Copy</button>
-           <button class="btn w-22  text-white bg-[#00A63E] rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+            <button id="copy-btn4" class="btn w-22 rounded-lg text-gray-500"><i class="fa-regular fa-copy"></i>Copy</button>
+           <button id="call-btn4" class="btn w-22  text-white bg-[#00A63E] rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
            </div>
         </div>
         <!-- Women & Child section -->
@@ -111,8 +111,8 @@
            <p class="font-bold">109</p>
            <div class="bg-gray-200 h-5 w-8 rounded-lg mb-3"><p class="text-xs text-gray-500 ml-1 mb-3">Help</p></div>
            <div class="flex gap-6">
-            <button class="btn w-22 rounded-lg text-gray-500"><i class="fa-regular fa-copy"></i>Copy</button>
-           <button class="btn w-22  text-white bg-[#00A63E] rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+            <button id="copy-btn5" class="btn w-22 rounded-lg text-gray-500"><i class="fa-regular fa-copy"></i>Copy</button>
+           <button id="call-btn5" class="btn w-22  text-white bg-[#00A63E] rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
            </div>
         </div>
         <!-- Anti corruption section -->
@@ -128,8 +128,8 @@
            <p class="font-bold">106</p>
            <div class="bg-gray-200 h-5 w-8 rounded-lg mb-3"><p class="text-xs text-gray-500 ml-1 mb-3">Govt.</p></div>
            <div class="flex gap-6">
-            <button class="btn w-22 rounded-lg text-gray-500"><i class="fa-regular fa-copy"></i>Copy</button>
-           <button class="btn w-22  text-white bg-[#00A63E] rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+            <button id="copy-btn6" id="copy-btn" class="btn w-22 rounded-lg text-gray-500"><i class="fa-regular fa-copy"></i>Copy</button>
+           <button id="call-btn6" class="btn w-22  text-white bg-[#00A63E] rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
            </div>
         </div>
         
@@ -142,13 +142,7 @@
         </div>
         
          <div class="history-container border-2 border-amber-500 mt-3 rounded-xl">
-            <div class="flex justify-between items-center bg-[#FAFAFA]">
-                <div>
-                    <h3>Fire Service Number</h3>
-                    <p>999</p>
-                </div>
-                <p>11:36:58 AM</p>
-            </div>
+            
             </div>
 </div>
 <script src="index.js"></script>
