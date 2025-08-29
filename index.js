@@ -72,10 +72,33 @@ const callButtons = document.getElementsByClassName('call')
       const p = document.getElementById('p' +index).innerText;
       const num = document.getElementById('num' +index).innerText;
 
-      alert("📞" + p +" " + num)
+      alert("📞 "+ "Calling " + p +" " + num)
     })
   }
 
+//   copy text
+function copyNumber(id) {
+    const numText = document.getElementById(id).innerText;
+
+    const tempInput = document.createElement("textarea");
+    tempInput.value = numText;
+    document.body.appendChild(tempInput);
+
+    tempInput.select();
+    document.execCommand("copy");
+
+    document.body.removeChild(tempInput);
+}
+
+// clear section
+
+const clearBtn = document.getElementById("clear-btn");
+const callHistory = document.getElementById("call-clear");
+
+clearBtn.addEventListener("click", function() {
+  
+  callHistory.innerHTML = "";
+});
 
 // function
 function heartCount(id){
@@ -97,35 +120,39 @@ function cutCoin(id) {
     document.getElementById("total-coin").innerText = balance;
   }
 
-
-document.getElementById("call-btn1").addEventListener("click", function () {
-    callHistory("call-btn1")
-})
-function callHistory(id) {
-    const button = document.getElementById(id);
-    const lineNumber = button.getAttribute("data-line");
-
-    const newEntry = {
-      name: "Unknown Caller",
-      line: lineNumber,
+// call history
+const data = {
+      name: "National Emergency Number",
+      number: "999",
       date: new Date().toLocaleTimeString()
     };
-
     historyData.push(data);
-const transactionContainer = document.getElementById("history-container");
-    transactionContainer.innerHTML = "";
+    console.log(data)
+
+function callTime(id){
+    const container = document.getElementById("history-container");
+    for (const item of historyData) {
+      const div = document.createElement("div");
+      div.innerHTML = `
+        <div class="flex justify-between items-center bg-[#FAFAFA]">
+        <div>
+        <h3>${data.name}</h3>
+        <p>${data.number}</p>
+        </div>
+        <p>${data.date}</p>
+         </div>
+      `;
+      container.appendChild(div);
+    }
+}
+
+document.getElementById("call-btn1").addEventListener("click", function () {
     
-for(const data of historyData){
-    const div = document.createElement("div")
-    div.innerHTML = `
-           <div class="flex justify-between items-center bg-[#FAFAFA]">
-                <div>
-                    <h3>>${data.name}</h3>
-                    <p>${data.line}</p>
-                </div>
-                <p>${data.date}</p>
-            </div>
-`
-    transactionContainer.appendChild(div)
-}
-}
+    callTime("call-btn1")
+    
+  })
+  document.getElementById("call-btn2").addEventListener("click", function () {
+    
+    callTime("call-btn2")
+    
+  })
